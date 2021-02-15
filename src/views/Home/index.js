@@ -1,22 +1,18 @@
-function App() {
+import React from 'react'
+import * as S from './styles';
+
+//MEUS COMPONENTES 
+import Header from '../../components/Header';
+
+
+function Home() {
     return (
         <div className="App">
-            <header className="App-header">
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-          </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-          </a>
-                <h1>Olá mundo</h1>
-            </header>
+            <S.Container>
+                <Header />
+            </S.Container>
         </div>
     );
 }
 
-export default App;
+export default Home;
