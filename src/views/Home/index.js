@@ -3,6 +3,7 @@ import * as S from './styles';
 
 //MEUS COMPONENTES 
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
         <div className="App">
             <S.Container>
                 <Header />
+                <Footer />
             </S.Container>
         </div>
     );

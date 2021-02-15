@@ -48,7 +48,7 @@ export const RightSide = styled.div`
             background: #FFF;
             color: #EE6B26;
             padding: 3px 7px;
-            border-radius: 50%;
+            border-radius: 50%; //deixar arredondado
             position: relative;
             top: -20px;
             right: 10px;
@@ -56,7 +56,7 @@ export const RightSide = styled.div`
         }
 
         &:hover{
-            opacity: 0.5;
+            opacity: 0.5; //efeito quando passar mouse
         }
 
     }
