@@ -9,8 +9,6 @@ export const Container = styled.div`
 
     position: fixed;
 
-    display: flex;
-
     bottom: 0; //mantem alinhado com rodapé
 
     align-items: center; //centraliza na vertical
