@@ -5,6 +5,7 @@ import * as S from './styles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import FilterCard from '../../components/FilterCard';
+import TaskCard from '../../components/TaskCard';
 
 
 function Home() {
@@ -16,22 +17,42 @@ function Home() {
             <S.Container>
                 <Header />
                 <S.FilterArea>
-                    <S.Button type="button" onClick={() => setFilterActived("all")}>
+                    <button type="button" onClick={() => setFilterActived("all")}>
                         <FilterCard title="Todos" actived={filterActived === 'all'} />
-                    </S.Button>
-                    <S.Button type="button" onClick={() => setFilterActived("today")}>
+                    </button>
+                    <button type="button" onClick={() => setFilterActived("today")}>
                         <FilterCard title="Hoje" actived={filterActived === 'today'} />
-                    </S.Button>
-                    <S.Button type="button" onClick={() => setFilterActived("week")}>
+                    </button>
+                    <button type="button" onClick={() => setFilterActived("week")}>
                         <FilterCard title="Semana" actived={filterActived === 'week'} />
-                    </S.Button>
-                    <S.Button type="button" onClick={() => setFilterActived("month")}>
+                    </button>
+                    <button type="button" onClick={() => setFilterActived("month")}>
                         <FilterCard title="Mês" actived={filterActived === 'month'} />
-                    </S.Button>
-                    <S.Button type="button" onClick={() => setFilterActived("year")}>
+                    </button>
+                    <button type="button" onClick={() => setFilterActived("year")}>
                         <FilterCard title="Ano" actived={filterActived === 'year'} />
-                    </S.Button>
+                    </button>
                 </S.FilterArea>
+
+                <S.Title>
+                    <h3>TAREFAS</h3>
+                </S.Title>
+
+                <S.Content>
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                    <TaskCard />
+                </S.Content>
+
                 <Footer />
             </S.Container>
         </div>

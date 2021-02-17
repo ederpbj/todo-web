@@ -8,3 +8,4 @@ Continuação do projeto todo com reactjs
 
 [Styled components - parte visual](https://styled-components.com/)
 
+[Sombras css](https://www.cssmatic.com/box-shadow)
