@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 250px;
     height: 200px;
-    box-shadow: -3px 1px 13px -2px rgba(0,0,0,0.75); // Gerado no box-shadow
+    box-shadow: -3px 1px 13px -2px rgba(0,0,0,0.75); // Gerado no box-shadow (https://www.cssmatic.com/box-shadow)
     border-radius: 10px;
 
     display: flex;
