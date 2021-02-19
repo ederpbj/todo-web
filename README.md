@@ -20,6 +20,8 @@ Continuação do projeto todo com reactjs
 
 [45. Conectando o Frontend com o Backend e Listando as tarefas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837224#announcements)
 
+[47. Deixando os ícones das Tarefas Dinâmicos](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837238#announcements)
+
 
 ### Comandos cmd
 

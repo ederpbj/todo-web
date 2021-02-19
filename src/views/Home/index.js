@@ -23,8 +23,8 @@ function Home() {
         await api.get(`/task/filter/${filterActived}/11:1a:95:9d:68:16`)
             .then(response => {
                 setTasks(response.data)
-                console.log(response.data)
-                console.log('<<<<<<<<<<<<<<<<<<<')
+                //console.log(response.data)
+                //console.log('<<<<<<<<<<<<<<<<<<<')
 
             })
     }
