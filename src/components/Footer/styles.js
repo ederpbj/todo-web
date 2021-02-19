@@ -6,7 +6,7 @@ export const Container = styled.div`
     background: #20295F;
     display: flex;
     border-top: 5px solid #EE6B26;
-    /* position: fixed; */ //fixar na tela
+    position: fixed; //fixar na tela
     /* position: relative; */
 
     bottom: 0; //mantem alinhado com rodapé

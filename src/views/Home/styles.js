@@ -28,6 +28,7 @@ export const Content = styled.div`
     display: flex;
     flex-wrap: wrap; //se não cabe na linha vai para baixo
     justify-content: center;
+    margin-bottom: 200px;
 `
 
 export const Title = styled.div`

@@ -24,6 +24,8 @@ Continuação do projeto todo com reactjs
 
 [48. Exibindo as tarefas atrasadas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837244#announcements)
 
+[49. Criando a tela de tarefas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840074#announcements)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API
