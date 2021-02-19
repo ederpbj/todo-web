@@ -5,7 +5,9 @@ export const Container = styled.div`
     height: 70px;
     background: #20295F;
     display: flex;
-    border-bottom: 5px solid #EE6B26
+    border-bottom: 5px solid #EE6B26;
+    
+
 `
 export const LeftSide = styled.div`
     width: 50%;
@@ -61,7 +63,7 @@ export const RightSide = styled.div`
 
     }
     
-    .dividir::after{
+    .dividir:after{
         content: "|";
         margin: 0 10px;
         color: #FFF;

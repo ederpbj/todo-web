@@ -18,3 +18,11 @@ Continuação do projeto todo com reactjs
 
 [44. Aplicando uma fonte padrão utilizando o Google Fonts](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18838666#announcements)
 
+[45. Conectando o Frontend com o Backend e Listando as tarefas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837224#announcements)
+
+
+### Comandos cmd
+
+`npm i axios` para conexão com API
+
+`npm i date-fns` para trabalhar com data e hora, when

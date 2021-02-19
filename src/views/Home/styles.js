@@ -14,6 +14,8 @@ export const FilterArea = styled.div`
         background: none;
         border: none;
     }
+
+    
 `
 
 // export const Button = styled.button`

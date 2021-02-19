@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 250px;
+    width: 220px;
     height: 200px;
     box-shadow: -3px 1px 13px -2px rgba(0,0,0,0.75); // Gerado no box-shadow (https://www.cssmatic.com/box-shadow)
     border-radius: 10px;
@@ -11,7 +11,7 @@ export const Container = styled.div`
     justify-content: center; // centraliza na horizontal
     flex-direction: column;
 
-    margin: 20px;
+    margin: 15px;
 
     cursor: pointer; //mouse vira mão
     transition: all 0.3s ease;

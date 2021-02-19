@@ -11,6 +11,7 @@ export const Container = styled.div`
     justify-content: space-around; // centraliza na tela
     cursor: pointer; //ao passar mouse aparece a mãozinha
 
+
     img {
         width: 25px;
         height: 25px;

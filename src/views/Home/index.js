@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+//useEffect é disparada toda vez que a tela é carregada 
+import React, { useState, useEffect } from 'react';
 import * as S from './styles';
 
 //MEUS COMPONENTES 
@@ -7,10 +8,31 @@ import Footer from '../../components/Footer';
 import FilterCard from '../../components/FilterCard';
 import TaskCard from '../../components/TaskCard';
 
+import api from '../../services/api';
+
 
 function Home() {
     //useState, atualiza o estado e notifica todos da aplicação
-    const [filterActived, setFilterActived] = useState();
+    const [filterActived, setFilterActived] = useState('all');
+
+    //Armazenar o response, em uma coleção vazia
+    const [taks, setTasks] = useState([]);
+
+    //Iniciando conexão com api
+    async function loadTasks() {
+        await api.get(`/task/filter/${filterActived}/11:1a:95:9d:68:16`)
+            .then(response => {
+                setTasks(response.data)
+                console.log(response.data)
+                console.log('<<<<<<<<<<<<<<<<<<<')
+
+            })
+    }
+
+    //Toda vez que a tela recarregar, chame load tasks
+    useEffect(() => {
+        loadTasks(); //pega no DB
+    }, [filterActived])
 
     return (
         <div className="App">
@@ -39,18 +61,12 @@ function Home() {
                 </S.Title>
 
                 <S.Content>
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
-                    <TaskCard />
+                    {
+                        //Pega tasks de forma dinâmica
+                        taks.map(t => (
+                            <TaskCard type={t.type} title={t.title} when={t.when} />
+                        ))
+                    }
                 </S.Content>
 
                 <Footer />
