@@ -6,7 +6,8 @@ import bell from '../../assets/bell.png';
 
 import * as S from './styles';
 
-function Header() {
+//recuperar a propriedade lateCount e clickNotification lá de home
+function Header({ lateCount, clickNotification }) {
     return (
         <S.Container>
             <S.LeftSide>
@@ -19,10 +20,11 @@ function Header() {
                 <span className="dividir" />
                 <a href="#">SINCRONIZAR COM CELULAR</a>
                 <span className="dividir" />
-                <a href="#" id="notification">
+                {/* <button onClick={clickNotification} id="notification"> id não usado*/}
+                <button onClick={clickNotification} id="notification">
                     <img src={bell} alt="Notificação" />
-                    <span>5</span>
-                </a>
+                    <span>{lateCount}</span>
+                </button>
             </S.RightSide>
         </S.Container>
     );

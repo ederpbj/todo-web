@@ -18,6 +18,9 @@ function Home() {
     //Armazenar o response, em uma coleção vazia
     const [taks, setTasks] = useState([]);
 
+    //quantas tarefas tem atrasadas
+    const [lateCount, setLateCount] = useState();
+
     //Iniciando conexão com api
     async function loadTasks() {
         await api.get(`/task/filter/${filterActived}/11:1a:95:9d:68:16`)
@@ -29,15 +32,30 @@ function Home() {
             })
     }
 
+    //Tarefas atrasadas
+    async function lateVerify() {
+        await api.get(`/task/filter/late/11:1a:95:9d:68:16`)
+            .then(response => {
+                setLateCount(response.data.length)
+            })
+    }
+
+    //Função para notificação
+    function Notification() {
+        setFilterActived('late');
+    }
+
     //Toda vez que a tela recarregar, chame load tasks
     useEffect(() => {
         loadTasks(); //pega no DB
+        lateVerify(); //número de tarefas atrasadas
     }, [filterActived])
 
     return (
         <div className="App">
             <S.Container>
-                <Header />
+                {/*lateCount: passa a informação para outras páginas*/}
+                <Header lateCount={lateCount} clickNotification={Notification} />
                 <S.FilterArea>
                     <button type="button" onClick={() => setFilterActived("all")}>
                         <FilterCard title="Todos" actived={filterActived === 'all'} />
@@ -57,7 +75,7 @@ function Home() {
                 </S.FilterArea>
 
                 <S.Title>
-                    <h3>TAREFAS</h3>
+                    <h3>{filterActived === 'late' ? 'TAREFAS ATRASADAS' : 'TAREFAS'}</h3>
                 </S.Title>
 
                 <S.Content>

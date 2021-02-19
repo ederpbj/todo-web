@@ -22,6 +22,7 @@ Continuação do projeto todo com reactjs
 
 [47. Deixando os ícones das Tarefas Dinâmicos](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837238#announcements)
 
+[48. Exibindo as tarefas atrasadas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837244#announcements)
 
 ### Comandos cmd
 
