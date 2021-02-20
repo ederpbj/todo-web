@@ -6,19 +6,21 @@ import bell from '../../assets/bell.png';
 
 import * as S from './styles';
 
+import { Link } from 'react-router-dom';
+
 //recuperar a propriedade lateCount e clickNotification lá de home
 function Header({ lateCount, clickNotification }) {
     return (
         <S.Container>
             <S.LeftSide>
-                <img src={logo} alt="Logo" />
+                <Link to="/"><img src={logo} alt="Logo" /></Link>
             </S.LeftSide>
             <S.RightSide>
-                <a href="#">INÍCIO</a>
+                <Link to="/">INÍCIO</Link>
                 <span className="dividir" />
-                <a href="#">NOVA TAREFA</a>
+                <Link to="/task">NOVA TAREFA</Link>
                 <span className="dividir" />
-                <a href="#">SINCRONIZAR COM CELULAR</a>
+                <Link to="/sync">SINCRONIZAR COM CELULAR</Link>
                 <span className="dividir" />
                 {/* <button onClick={clickNotification} id="notification"> id não usado*/}
                 <button onClick={clickNotification} id="notification">

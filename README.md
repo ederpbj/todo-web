@@ -28,8 +28,12 @@ Continuação do projeto todo com reactjs
 
 [50. Cadastrando uma tarefa](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840086#announcements)
 
+[51. Desenvolvendo a navegação de tela](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18848202#announcements)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API
 
 `npm i date-fns` para trabalhar com data e hora, when
+
+`npm i react-router-dom` para gerenciar rotas
