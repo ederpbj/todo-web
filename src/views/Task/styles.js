@@ -65,6 +65,7 @@ export const Input = styled.div`
         padding: 0px;
         ::-webkit-calendar-picker-indicator { 
             background: #FFFF;
+            
         }
         
         

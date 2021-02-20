@@ -26,6 +26,19 @@ function Task() {
     //captura o tipo do icone selecionado
     const [type, setType] = useState();
 
+    //id da tarefa
+    const [id, setId] = useState();
+
+    //tarefa concluída ou não
+    const [done, setDone] = useState(false);
+
+    //Dados do form
+    const [title, setTitle] = useState();
+    const [description, setDescription] = useState();
+    const [date, setDate] = useState();
+    const [hour, setHour] = useState();
+    const [macaddress, setMacaddress] = useState('11:1a:95:9d:68:16');
+
     //Tarefas atrasadas
     async function lateVerify() {
         await api.get(`/task/filter/late/11:1a:95:9d:68:16`)
@@ -34,9 +47,18 @@ function Task() {
             })
     }
 
-    //Função para notificação
-    function Notification() {
-        setFilterActived('late');
+    //Salva formulário, chamado pelo botão SALVAR
+    async function Save() {
+        await api.post('/task', {
+            macaddress,
+            type,
+            title,
+            description,
+            when: `${date}T${hour}:00.000`,
+            type
+        }).then(() => {
+            alert('TAREFA CADASTRADA COM SUCESSO!')
+        })
     }
 
     //Toda vez que a tela recarregar, chame load tasks
@@ -65,35 +87,40 @@ function Task() {
 
                     <S.Input>
                         <span>Título</span>
-                        <input type="text" placeholder="Título da tarefa..."></input>
+                        <input type="text" placeholder="Título da tarefa..."
+                            //captura o input em tempo real
+                            onChange={e => { setTitle(e.target.value) }} value={title} />
                     </S.Input>
 
                     <S.TextArea>
-                        <span>Título</span>
-                        <textarea rows={5} placeholder="Detalhes da tarefa..." />
+                        <span>Descrição</span>
+                        <textarea rows={5} placeholder="Detalhes da tarefa..."
+                            onChange={e => { setDescription(e.target.value) }} value={description} />
                     </S.TextArea>
 
                     <S.Input>
                         <span>Data</span>
-                        <input type="date" placeholder="Data"></input>
+                        <input type="date" placeholder="Data"
+                            onChange={e => { setDate(e.target.value) }} value={date} />
                         <img src={iconCalendar} alt="Calendário" />
                     </S.Input>
 
                     <S.Input>
                         <span>Hora</span>
-                        <input type="time" placeholder="Hora"></input>
+                        <input type="time" placeholder="Hora"
+                            onChange={e => { setHour(e.target.value) }} value={hour} />
                         <img src={iconClock} alt="Hora" />
                     </S.Input>
                     <S.Options>
                         <div>
-                            <input type="checkbox" />
-                            <span>CONCLUÍDO</span>
+                            <input type="checkbox" checked={done} onChange={() => setDone(!done)} />
+                            <span>CONCLUÍDO - {done ? 'concluído' : 'falso'}</span>
                         </div>
                         <button type="button">EXCLUÍDO</button>
                     </S.Options>
 
                     <S.Save>
-                        <button type="buttun">SALVAR</button>
+                        <button type="buttun" onClick={Save}>SALVAR</button>
                     </S.Save>
 
                 </S.Form>
