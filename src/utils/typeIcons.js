@@ -7,7 +7,6 @@ import iconParty from '../assets/party.png';
 import iconShop from '../assets/shop.png';
 import iconSport from '../assets/sport.png';
 import iconStudy from '../assets/study.png';
-import iconTime from '../assets/time.png';
 import iconTravel from '../assets/travel.png';
 
 //Coleção de icones
@@ -21,7 +20,6 @@ const typeIcons = [
     iconShop,
     iconSport,
     iconStudy,
-    iconTime,
     iconTravel
 ];
 

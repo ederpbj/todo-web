@@ -6,7 +6,7 @@ import Task from './views/Task';
 //enquanto não tiver navegação trocar Home por Task
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Task />
   </React.StrictMode>,
   document.getElementById('root')
 );
