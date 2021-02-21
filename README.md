@@ -32,6 +32,9 @@ Continuação do projeto todo com reactjs
 
 [52. Carregando os dados de uma tarefa](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840090#announcements)
 
+[53. Atualizando as informações da tarefa e redirecionando a página](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840094#content)
+
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API

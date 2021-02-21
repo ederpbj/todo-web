@@ -83,6 +83,7 @@ function Home() {
                     {
                         //Pega tasks de forma dinâmica
                         taks.map(t => (
+                            //interpolação entre chaves {}
                             <Link to={`/task/${t._id}`}>
                                 <TaskCard type={t.type} title={t.title} when={t.when} />
                             </Link>
