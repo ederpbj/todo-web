@@ -15,6 +15,9 @@ export const Container = styled.div`
 
     cursor: pointer; //mouse vira mão
     transition: all 0.3s ease;
+    
+    //deixa claro tarefas concluídas
+    opacity: ${props => props.done ? 0.5 : 1};
 
     &:hover{
         opacity: 0.5;

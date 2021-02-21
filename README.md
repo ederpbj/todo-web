@@ -34,6 +34,11 @@ Continuação do projeto todo com reactjs
 
 [53. Atualizando as informações da tarefa e redirecionando a página](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840094#content)
 
+[54. Validando os campos obrigatórios](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857626#content)
+
+[55. Refatorando a API para permitir atualizar o status de uma tarefa do passado](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857754#content)
+
+[56. Removendo uma tarefa](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840100#content)
 
 ### Comandos cmd
 

@@ -34,6 +34,7 @@ function Task({ match }) {
 
     //Função para carregar os detalhes da API
     //match : tras as informções de parametro de navegação
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async function LoadTaskDetails() {
         //Pega o id da tarefa que chega pela url
         await api.get(`/task/${match.params.id}`)
@@ -97,11 +98,22 @@ function Task({ match }) {
     }
 
     async function Remove() {
+        //windows abre uma janela de confirmação
         const res = window.confirm('Deseja realmente remover a tarefa?')
         if (res == true) {
             await api.delete(`/task/${match.params.id}`)
+                //Se der tudo certo, redireciona para página inicial
                 .then(() => setRedirect(true));
         }
+
+        //Antigo
+        /*
+        if(res == true){
+            alert('ok, vamos remover')
+        }else{
+            alert('tudo bem, vamos manter')
+        }
+        */
     }
 
     //Toda vez que a tela recarregar, chame load tasks
@@ -114,7 +126,7 @@ function Task({ match }) {
     return (
         <S.Container>
             {/*se redirect for tru, ele redireciona */}
-            { redirect && <Redirect to="/" />}
+            { /* redirect && <Redirect to="/" /> */}
             {/*lateCount: passa a informação para outras páginas*/}
             <Header />
             <S.Form>
@@ -162,7 +174,8 @@ function Task({ match }) {
                         <input type="checkbox" checked={done} onChange={() => setDone(!done)} />
                         <span>CONCLUÍDO - {done ? 'concluído' : 'falso'}</span>
                     </div>
-                    <button type="button">EXCLUÍDO</button>
+                    {/* Se existir o math aparece botão EXCLUIR*/}
+                    {match.params.id && <button type="button" onClick={Remove}>EXCLUIR</button>}
                 </S.Options>
 
                 <S.Save>

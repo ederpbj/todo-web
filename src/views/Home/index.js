@@ -1,7 +1,10 @@
 //useEffect é disparada toda vez que a tela é carregada 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import * as S from './styles';
+
+import api from '../../services/api';
+import isConnected from '../../utils/isConnected';
 
 //MEUS COMPONENTES 
 import Header from '../../components/Header';
@@ -9,69 +12,75 @@ import Footer from '../../components/Footer';
 import FilterCard from '../../components/FilterCard';
 import TaskCard from '../../components/TaskCard';
 
-import api from '../../services/api';
-
 
 function Home() {
     //useState, atualiza o estado e notifica todos da aplicação
     const [filterActived, setFilterActived] = useState('all');
 
     //Armazenar o response, em uma coleção vazia
-    const [taks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState([]);
+
+    const [redirect, setRedirect] = useState(false);
 
     //quantas tarefas tem atrasadas
-    const [lateCount, setLateCount] = useState();
+    //const [lateCount, setLateCount] = useState();
 
     //Iniciando conexão com api
     async function loadTasks() {
-        await api.get(`/task/filter/${filterActived}/11:1a:95:9d:68:16`)
+        await api.get(`/task/filter/${filterActived}/${isConnected}`)
             .then(response => {
                 setTasks(response.data)
-                //console.log(response.data)
-                //console.log('<<<<<<<<<<<<<<<<<<<')
-
             })
     }
 
     //Tarefas atrasadas
+    /*
     async function lateVerify() {
         await api.get(`/task/filter/late/11:1a:95:9d:68:16`)
             .then(response => {
                 setLateCount(response.data.length)
             })
     }
+    */
 
     //Função para notificação
     function Notification() {
         setFilterActived('late');
     }
 
+
     //Toda vez que a tela recarregar, chame load tasks
     useEffect(() => {
         loadTasks(); //pega no DB
-        lateVerify(); //número de tarefas atrasadas
-    }, [filterActived])
+
+        if (!isConnected)
+            setRedirect(true);
+
+        //lateVerify(); //número de tarefas atrasadas
+    }, [filterActived, loadTasks])
 
     return (
         <div className="App">
             <S.Container>
                 {/*lateCount: passa a informação para outras páginas*/}
-                <Header lateCount={lateCount} clickNotification={Notification} />
+                {/*redirect && <Redirect to="/qrcode" />*/}
+                <Header clickNotification={Notification} />
+
                 <S.FilterArea>
                     <button type="button" onClick={() => setFilterActived("all")}>
-                        <FilterCard title="Todos" actived={filterActived === 'all'} />
+                        <FilterCard title="Todos" actived={filterActived == 'all'} />
                     </button>
                     <button type="button" onClick={() => setFilterActived("today")}>
-                        <FilterCard title="Hoje" actived={filterActived === 'today'} />
+                        <FilterCard title="Hoje" actived={filterActived == 'today'} />
                     </button>
                     <button type="button" onClick={() => setFilterActived("week")}>
-                        <FilterCard title="Semana" actived={filterActived === 'week'} />
+                        <FilterCard title="Semana" actived={filterActived == 'week'} />
                     </button>
                     <button type="button" onClick={() => setFilterActived("month")}>
-                        <FilterCard title="Mês" actived={filterActived === 'month'} />
+                        <FilterCard title="Mês" actived={filterActived == 'month'} />
                     </button>
                     <button type="button" onClick={() => setFilterActived("year")}>
-                        <FilterCard title="Ano" actived={filterActived === 'year'} />
+                        <FilterCard title="Ano" actived={filterActived == 'year'} />
                     </button>
                 </S.FilterArea>
 
@@ -82,10 +91,9 @@ function Home() {
                 <S.Content>
                     {
                         //Pega tasks de forma dinâmica
-                        taks.map(t => (
-                            //interpolação entre chaves {}
+                        tasks.map(t => (
                             <Link to={`/task/${t._id}`}>
-                                <TaskCard type={t.type} title={t.title} when={t.when} />
+                                <TaskCard type={t.type} title={t.title} when={t.when} done={t.done} />
                             </Link>
                         ))
                     }
