@@ -1,5 +1,6 @@
 //useEffect é disparada toda vez que a tela é carregada 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import * as S from './styles';
 
 //MEUS COMPONENTES 
@@ -82,7 +83,9 @@ function Home() {
                     {
                         //Pega tasks de forma dinâmica
                         taks.map(t => (
-                            <TaskCard type={t.type} title={t.title} when={t.when} />
+                            <Link to={`/task/${t._id}`}>
+                                <TaskCard type={t.type} title={t.title} when={t.when} />
+                            </Link>
                         ))
                     }
                 </S.Content>

@@ -6,6 +6,7 @@ import * as S from './styles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import typeIcons from '../../utils/typeIcons';
+import { format } from 'date-fns';
 
 
 import iconCalendar from '../../assets/calendar.png';
@@ -47,6 +48,19 @@ function Task() {
             })
     }
 
+    //Tarefas atrasadas
+    async function LoadTaskDetails({ match }) {
+        //Pega o id da tarefa que chega pela url
+        await api.get(`/task/${match.params.id}`)
+            .then(response => {
+                setType(response.data.type)
+                setTitle(response.data.title)
+                setDescription(response.data.description)
+                setDate(format(new Date(response.data.when)), 'yyyy-MM-dd')
+                setHour(format(new Date(response.data.when)), 'HH:mm')
+            })
+    }
+
     //Salva formulário, chamado pelo botão SALVAR
     async function Save() {
         await api.post('/task', {
@@ -55,7 +69,6 @@ function Task() {
             title,
             description,
             when: `${date}T${hour}:00.000`,
-            type
         }).then(() => {
             alert('TAREFA CADASTRADA COM SUCESSO!')
         })
@@ -64,6 +77,7 @@ function Task() {
     //Toda vez que a tela recarregar, chame load tasks
     useEffect(() => {
         lateVerify(); //número de tarefas atrasadas
+        //LoadTaskDetails(); //carrega os dados pelo id
     }, [])
 
     return (
@@ -120,7 +134,7 @@ function Task() {
                     </S.Options>
 
                     <S.Save>
-                        <button type="buttun" onClick={Save}>SALVAR</button>
+                        <button type="button" onClick={Save}>SALVAR</button>
                     </S.Save>
 
                 </S.Form>

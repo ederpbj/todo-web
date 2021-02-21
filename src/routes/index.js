@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route,
     Link
@@ -11,31 +11,41 @@ import Task from '../views/Task';
 
 export default function Routes() {
     return (
-        <Router>
-            <Switch>
-                <Route path="/task">
-                    <Task />
-                </Route>
-                <Route path="/">
-                    <Home />
-                </Route>
-            </Switch>
-        </Router>
-    )
+        <div>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route >
+                        <Task />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </div>
+    );
 }
-/* <div>
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/task">Task</Link>
-            </li>
-        </ul>
-    </nav>
-</div>
-</Router>
+/*
+ <div>
+            <Router>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/task">Task</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <Switch>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/task">
+                        <Task />
+                    </Route>
+                </Switch>
+            </Router>
+        </div>
 
 
 

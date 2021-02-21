@@ -29,6 +29,11 @@ export const Content = styled.div`
     flex-wrap: wrap; //se não cabe na linha vai para baixo
     justify-content: center;
     margin-bottom: 200px;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
 `
 
 export const Title = styled.div`

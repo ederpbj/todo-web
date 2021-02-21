@@ -30,6 +30,8 @@ Continuação do projeto todo com reactjs
 
 [51. Desenvolvendo a navegação de tela](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18848202#announcements)
 
+[52. Carregando os dados de uma tarefa](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840090#announcements)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API
