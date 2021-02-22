@@ -48,6 +48,8 @@ export const RightSide = styled.div`
         }
     }
 
+    
+
     #notification {
         img {
             width: 25px;
@@ -64,6 +66,7 @@ export const RightSide = styled.div`
             right: 10px;
 
         }
+        
 
         &:hover{
             opacity: 0.5; //efeito quando passar mouse
@@ -76,4 +79,6 @@ export const RightSide = styled.div`
         margin: 0 10px;
         color: #FFF;
     }
+
+    
 `

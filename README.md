@@ -48,6 +48,8 @@ Continuação do projeto todo com reactjs
 
 [58. Ocultando o sino quando não tem notificações](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18858138#content)
 
+[59. Refatorando as Notificações no componente Header](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18867526#questions/14164228)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API

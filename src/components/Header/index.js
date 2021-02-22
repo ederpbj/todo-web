@@ -45,6 +45,7 @@ function Header({ clickNotification }) {
                     <button type="button" onClick={Logout}>SAIR</button>
                 }
                 {
+                    //só mostra o sino se tiver tarefa atrasada
                     lateCount &&
                     <>
                         <span className="dividir" />
