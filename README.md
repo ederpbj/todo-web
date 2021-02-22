@@ -30,11 +30,16 @@ Continuação do projeto todo com reactjs
 
 [51. Desenvolvendo a navegação de tela](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18848202#announcements)
 
+>>> Erro no código
+
 [52. Carregando os dados de uma tarefa](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840090#announcements)
+
+<<<
 
 [53. Atualizando as informações da tarefa e redirecionando a página](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840094#content)
 
 [54. Validando os campos obrigatórios](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857626#content)
+
 
 [55. Refatorando a API para permitir atualizar o status de uma tarefa do passado](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857754#content)
 
@@ -42,6 +47,7 @@ Continuação do projeto todo com reactjs
 
 [57. Desenvolvendo a tela do QrCode](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857760#content)
 
+[58. Ocultando o sino quando não tem notificações](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18858138#content)
 ### Comandos cmd
 
 `npm i axios` para conexão com API
