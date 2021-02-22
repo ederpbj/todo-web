@@ -12,13 +12,16 @@ import isConnected from '../../utils/isConnected';
 function Header({ clickNotification }) {
     const [lateCount, setLateCount] = useState();
 
+    //Foi removido das views, veio para components
     async function lateVerify() {
+        //await api.get(`/task/filter/late/${isConnected}`)
         await api.get(`/task/filter/late/${isConnected}`)
             .then(response => {
                 setLateCount(response.data.length)
             })
     }
 
+    //Vai na api e busca as informações
     useEffect(() => {
         lateVerify();
     })

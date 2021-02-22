@@ -30,9 +30,9 @@ export const RightSide = styled.div`
     justify-content: flex-end;
 
     button{
-            background: none;
-            border:none;
-            cursor: pointer;
+        background: none;
+        border:none;
+        cursor: pointer;
     }
 
     a, button {
@@ -46,11 +46,7 @@ export const RightSide = styled.div`
         &:hover{
             color: #EE6B26;
         }
-    }
 
-    
-
-    #notification {
         img {
             width: 25px;
             height: 30px;
@@ -71,7 +67,6 @@ export const RightSide = styled.div`
         &:hover{
             opacity: 0.5; //efeito quando passar mouse
         }
-
     }
     
     .dividir:after{
@@ -79,6 +74,10 @@ export const RightSide = styled.div`
         margin: 0 10px;
         color: #FFF;
     }
+
+    button {
+    font-size: 16px;
+  }
 
     
 `

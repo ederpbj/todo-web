@@ -12,6 +12,8 @@ Continuação do projeto todo com reactjs
 
 [Google Fonts](https://fonts.google.com/)
 
+[QrCode react](https://www.npmjs.com/package/qrcode.react)
+
 ### Tutorial
 
 [43. Criando os cartões de Tarefas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837218#announcements)
@@ -50,6 +52,8 @@ Continuação do projeto todo com reactjs
 
 [59. Refatorando as Notificações no componente Header](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18867526#questions/14164228)
 
+[60. Gerando o QrCode](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857762#questions/14164228)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API
@@ -57,3 +61,5 @@ Continuação do projeto todo com reactjs
 `npm i date-fns` para trabalhar com data e hora, when
 
 `npm i react-router-dom` para gerenciar rotas
+
+`npm install qrcode.react` qr code para react
