@@ -40,6 +40,8 @@ Continuação do projeto todo com reactjs
 
 [56. Removendo uma tarefa](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18840100#content)
 
+[57. Desenvolvendo a tela do QrCode](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857760#content)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API
