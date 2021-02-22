@@ -66,12 +66,11 @@ function Task({ match }) {
 
         //Se tem um id, é para atualizar, se não cadastra novo
         if (match.params.id) {
-            console.log('>>>>> Aqui <<<<<')
-
+            // console.log('>>>>> Aqui <<<<<')
             //Atualizar, pelo id
             // await api.put(`/task/${match.params.id}`, {
             await api.put(`/task/${match.params.id}`, {
-                macaddress: isConnected,
+                macaddress: isConnected, //pega o macaddres pelo navegador
                 done,
                 type,
                 title,

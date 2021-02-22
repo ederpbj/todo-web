@@ -56,6 +56,8 @@ Continuação do projeto todo com reactjs
 
 [61. Salvando informações no navegador do usuário](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18870882#questions/14164228)
 
+[62. Ajustes finais e Finalizando o projeto Web](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857766#content)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API
