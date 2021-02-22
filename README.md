@@ -54,6 +54,8 @@ Continuação do projeto todo com reactjs
 
 [60. Gerando o QrCode](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857762#questions/14164228)
 
+[61. Salvando informações no navegador do usuário](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18870882#questions/14164228)
+
 ### Comandos cmd
 
 `npm i axios` para conexão com API

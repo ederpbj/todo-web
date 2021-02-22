@@ -27,6 +27,7 @@ function Header({ clickNotification }) {
     })
 
     async function Logout() {
+        //linpa o Local Storage, e da um reload no navegador
         localStorage.removeItem('@todo/macaddress');
         window.location.reload();
     }
@@ -34,18 +35,29 @@ function Header({ clickNotification }) {
     return (
         <S.Container>
             <S.LeftSide>
-                <Link to="/"><img src={logo} alt="Logo" /></Link>
+                {/**Imagem deixa de ser link se não estiver conectado */}
+                {!isConnected ?
+                    <img src={logo} alt="Logo" />
+                    :
+                    <Link to="/"><img src={logo} alt="Logo" /></Link>
+                }
             </S.LeftSide>
-            <S.RightSide>
-                <Link to="/">INÍCIO</Link>
-                <span className="dividir" />
-                <Link to="/task">NOVA TAREFA</Link>
-                <span className="dividir" />
 
+            <S.RightSide>
+
+
+
+                {/*Se isConnected vazio, não está conectado SINCRONIZAR, ou Se estiver SAIR */}
                 {!isConnected ?
                     <Link to="/qrcode">SINCRONIZAR CELULAR</Link>
                     :
-                    <button type="button" onClick={Logout}>SAIR</button>
+                    <S.Connected>
+                        <Link to="/">INÍCIO</Link>
+                        <span className="dividir" />
+                        <Link to="/task">NOVA TAREFA</Link>
+                        <span className="dividir" />
+                        <button type="button" onClick={Logout}>SAIR</button>
+                    </S.Connected>
                 }
                 {
                     //só mostra o sino se tiver tarefa atrasada

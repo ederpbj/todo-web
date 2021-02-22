@@ -118,7 +118,7 @@ function Task({ match }) {
 
     //Toda vez que a tela recarregar, chame load tasks
     useEffect(() => {
-        if (!isConnected)
+        if (!isConnected) //pega o macaddress
             setRedirect(true);
         LoadTaskDetails(); //carrega os dados pelo id
     }, [LoadTaskDetails])
@@ -126,7 +126,7 @@ function Task({ match }) {
     return (
         <S.Container>
             {/*se redirect for tru, ele redireciona */}
-            { /* redirect && <Redirect to="/" /> */}
+            {redirect && <Redirect to="/" />}
             {/*lateCount: passa a informação para outras páginas*/}
             <Header />
             <S.Form>

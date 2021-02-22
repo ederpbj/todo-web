@@ -53,7 +53,9 @@ function Home() {
     useEffect(() => {
         loadTasks(); //pega no DB
 
-        if (!isConnected)
+        //alert(isConnected); // Testar o que vem no isConected
+
+        if (!isConnected) //Se isConnected não esta vazio, redireciona para home
             setRedirect(true);
 
         //lateVerify(); //número de tarefas atrasadas
@@ -63,7 +65,7 @@ function Home() {
         <div className="App">
             <S.Container>
                 {/*lateCount: passa a informação para outras páginas*/}
-                {/*redirect && <Redirect to="/qrcode" />*/}
+                {redirect && <Redirect to="/qrcode" />}
                 <Header clickNotification={Notification} />
 
                 <S.FilterArea>

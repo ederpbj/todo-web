@@ -79,5 +79,9 @@ export const RightSide = styled.div`
     font-size: 16px;
   }
 
-    
+   
+`
+
+export const Connected = styled.div`
+
 `
