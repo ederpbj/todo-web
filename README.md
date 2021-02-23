@@ -14,6 +14,10 @@ Continuação do projeto todo com reactjs
 
 [QrCode react](https://www.npmjs.com/package/qrcode.react)
 
+[Formik testar](https://formik.org/docs/overview)
+
+[Documentação React forms](https://pt-br.reactjs.org/docs/forms.html)
+
 ### Tutorial
 
 [43. Criando os cartões de Tarefas](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18837218#announcements)
@@ -59,6 +63,8 @@ Continuação do projeto todo com reactjs
 [62. Ajustes finais e Finalizando o projeto Web](https://www.udemy.com/course/projeto-completo-xd-nodejs-mongodb-react-native-e-react/learn/lecture/18857766#content)
 
 ### Comandos cmd
+
+`npm start` para rodar o projeto
 
 `npm i axios` para conexão com API
 
